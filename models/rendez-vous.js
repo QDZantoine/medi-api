@@ -34,12 +34,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DATE,
             allowNull: false
         },
-        updatedAt: {
-            type: DataTypes.DATE,
-            allowNull: false
-        }
     }, {
-        tableName: 'rendezVous'
+        tableName: 'rendezVous',
+        updatedAt: false
       });
 
     Rdv.associate = (models) => {

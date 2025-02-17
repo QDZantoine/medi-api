@@ -10,4 +10,13 @@ router.post('/', async (req, res) => {
         res.status(400).json({error: error.message})
     }
 })
+
+router.get('/', async (req, res) => {
+    try {
+        const factures = await Facture.create(req.body);
+        res.status(201).json(factures)
+    } catch(error) {
+        res.status(400).json({error: error.message})
+    }
+})
 module.exports = router

@@ -43,7 +43,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
     }, {
-        tableName: 'Factures'
+        tableName: 'Factures',
+        updatedAt: false
       })
     Facture.associate = (models) => {
         Facture.belongsTo(models.Praticien, { foreignKey: 'praticienId', as: 'praticien' });

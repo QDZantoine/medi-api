@@ -29,7 +29,8 @@ module.exports = (sequelize, DataTypes) => {
           allowNull: false
         },
     }, {
-      tableName: 'Praticiens'
+      tableName: 'Praticiens',
+      updatedAt: false
     })
     Praticien.associate = (models) => {
       Praticien.hasMany(models.Facture, { foreignKey: 'praticienId', as: 'factures' });
